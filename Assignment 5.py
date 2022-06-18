@@ -284,21 +284,21 @@ print()
 
 # Question - 9
 
-# line_1 accepts the entry of line by user
-# to_be_found takes input on the word to be found
-# print() creates a space inbetween lines while execution of codes making them easier to read
-print()
-line_1 = str(input("Enter the statement :\n"))
-print()
-to_be_found = input("Enter the word whose occurneces are to be counted :\n")
+# Input of string by user 
+line_1 = input("Enter the string :\n")
 
-# occurences count that word in the earliest input by user(in line_1)
-occurences = line_1.count(to_be_found)
+# Creating an empty dictonary to store all different words
+count_1 = dict()
 
-print()
-print(to_be_found,"occured",occurences,"times.")
+# Storing all words in a list by seprating them
+words = line_1.split(' ')
+for word in words :
+    if word in count_1 :
+        count_1[word] += 1
+    else :
+        count_1[word] = 1
 
-
+print(count_1)
 
 
 
